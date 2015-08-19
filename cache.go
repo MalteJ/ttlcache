@@ -30,7 +30,6 @@ func (cache *Cache) Get(key string) (data string, found bool) {
 		data = ""
 		found = false
 	} else {
-		item.touch(cache.ttl)
 		data = item.data
 		found = true
 	}
